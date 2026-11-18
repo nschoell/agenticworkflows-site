@@ -1,0 +1,153 @@
+import Link from "next/link";
+import {
+  Rocket,
+  Workflow,
+  BrainCircuit,
+  Users,
+  Blocks,
+  ArrowRight,
+  Sparkles,
+} from "lucide-react";
+import Layout from "../components/Layout";
+
+const pillars = [
+  {
+    title: "Agentic Workflows",
+    href: "/knowledge-pillars/agentic-workflows",
+    desc: "Design and orchestrate autonomous AI agents that plan, act, and adapt.",
+    icon: Workflow,
+  },
+  {
+    title: "AI for Operations",
+    href: "/knowledge-pillars/ai-for-operations",
+    desc: "Use AI to automate and optimize the operational backbone of your business.",
+    icon: BrainCircuit,
+  },
+  {
+    title: "Human-in-the-Loop",
+    href: "/knowledge-pillars/human-in-the-loop",
+    desc: "Build systems where humans supervise and steer AI for better outcomes.",
+    icon: Users,
+  },
+  {
+    title: "No-Code Stack",
+    href: "/knowledge-pillars/no-code-stack",
+    desc: "Assemble powerful automation stacks without writing code.",
+    icon: Blocks,
+  },
+];
+
+const latest = [
+  {
+    title: "Deep Dive: Building an Agentic Workflow from Scratch",
+    category: "Deep Dive",
+    href: "/archive",
+    excerpt:
+      "A hands-on walkthrough of the components, memory, and tools that make a reliable agent loop.",
+  },
+  {
+    title: "How-To: Automating Ops with AI",
+    category: "How-To",
+    href: "/archive",
+    excerpt:
+      "Practical patterns for wiring AI into your operational workflows without the chaos.",
+  },
+  {
+    title: "Trend Watch: The Rise of Human-in-the-Loop AI",
+    category: "Trend",
+    href: "/archive",
+    excerpt:
+      "Why the most successful AI systems pair autonomy with human oversight.",
+  },
+];
+
+export default function HomePage() {
+  return (
+    <Layout>
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(79,70,229,0.25),transparent)]" />
+        <div className="container-blog py-24 text-center sm:py-32">
+          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-sm font-medium text-brand-300">
+            <Sparkles className="h-4 w-4" /> Your guide to working smarter with AI
+          </span>
+          <h1 className="mx-auto max-w-3xl text-4xl font-extrabold tracking-tight sm:text-6xl">
+            AI Productivity,{" "}
+            <span className="bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent">
+              without the guesswork
+            </span>
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-400">
+            Deep dives, how-tos, and frameworks on agentic workflows, AI-driven
+            operations, and the human-in-the-loop future of work.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <Link href="/archive" className="btn-primary">
+              <Rocket className="h-4 w-4" /> Explore the Archive
+            </Link>
+            <Link href="/library" className="btn-ghost">
+              Browse the Library <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Knowledge pillars */}
+      <section className="container-blog py-16">
+        <div className="mb-10 max-w-2xl">
+          <h2 className="text-3xl font-bold tracking-tight">
+            Four knowledge pillars
+          </h2>
+          <p className="mt-3 text-slate-400">
+            Every article on this site maps to one of these areas. Start with
+            the pillar that matches where you want to go.
+          </p>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {pillars.map((p) => (
+            <Link key={p.href} href={p.href} className="card group block">
+              <p.icon className="mb-4 h-8 w-8 text-brand-400" />
+              <h3 className="mb-2 font-semibold group-hover:text-brand-300">
+                {p.title}
+              </h3>
+              <p className="text-sm text-slate-400">{p.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Latest */}
+      <section className="border-t border-slate-800 bg-slate-900/30">
+        <div className="container-blog py-16">
+          <div className="mb-10 flex items-end justify-between">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight">
+                Latest from the archive
+              </h2>
+              <p className="mt-3 text-slate-400">
+                Fresh takes on building productive AI systems.
+              </p>
+            </div>
+            <Link
+              href="/archive"
+              className="hidden items-center gap-1 text-sm font-medium text-brand-400 hover:text-brand-300 sm:flex"
+            >
+              View all <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {latest.map((post) => (
+              <Link key={post.title} href={post.href} className="card block">
+                <span className="mb-3 inline-block rounded-full bg-brand-500/10 px-3 py-1 text-xs font-medium text-brand-300">
+                  {post.category}
+                </span>
+                <h3 className="mb-2 font-semibold">{post.title}</h3>
+                <p className="text-sm text-slate-400">{post.excerpt}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+}

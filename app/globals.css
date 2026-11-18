@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased;
+    font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .container-blog {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+  .card {
+    @apply rounded-2xl border border-slate-800 bg-slate-900/60 p-6 shadow-sm transition hover:border-brand-500/50 hover:shadow-lg hover:shadow-brand-500/10;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-slate-500 hover:bg-slate-800/50;
+  }
+  .prose-blog :where(h1, h2, h3, h4) {
+    @apply mt-8 mb-4 font-semibold tracking-tight;
+  }
+  .prose-blog :where(h1) { @apply text-3xl; }
+  .prose-blog :where(h2) { @apply text-2xl; }
+  .prose-blog :where(h3) { @apply text-xl; }
+  .prose-blog :where(p) { @apply my-4 leading-relaxed text-slate-300; }
+  .prose-blog :where(ul) { @apply my-4 list-disc space-y-2 pl-6 text-slate-300; }
+  .prose-blog :where(ol) { @apply my-4 list-decimal space-y-2 pl-6 text-slate-300; }
+  .prose-blog :where(li) { @apply leading-relaxed; }
+  .prose-blog :where(code) { @apply rounded bg-slate-800 px-1.5 py-0.5 text-sm text-brand-300; }
+  .prose-blog :where(pre) { @apply my-6 overflow-x-auto rounded-xl bg-slate-900 p-4; }
+  .prose-blog :where(a) { @apply text-brand-400 underline hover:text-brand-300; }
+  .prose-blog :where(blockquote) { @apply my-6 border-l-4 border-brand-500/50 pl-4 italic text-slate-400; }
+  .prose-blog :where(hr) { @apply my-8 border-slate-800; }
+  .prose-blog :where(strong) { @apply font-semibold text-slate-100; }
+  .prose-blog :where(em) { @apply italic; }
+}
