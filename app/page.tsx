@@ -113,10 +113,19 @@ export default function HomePage() {
               <p className="text-sm text-slate-400">{p.desc}</p>
             </Link>
           ))}
+
+      {/* Featured Trend */}
+      <section className="border-t border-slate-800 bg-slate-900/30">
+        <div className="container-blog py-12">
+          <h2 className="mb-6 text-2xl font-bold text-white">Featured Trend</h2>
+          <Link href="/posts/trend-2-manager" className="card block">
+            <span className="mb-3 inline-block rounded-full bg-brand-500/10 px-3 py-1 text-xs font-medium text-brand-300">Trend</span>
+            <h3 className="mb-2 font-semibold">Trend Watch: Real‑Time Operations Monitoring with Generative AI (Manager Overview)</h3>
+            <p className="text-sm text-slate-400">How AI can surface context‑rich alerts from raw metrics, reducing noise and accelerating incident response.</p>
+          </Link>
         </div>
       </section>
 
-      {/* Latest */}
       <section className="border-t border-slate-800 bg-slate-900/30">
         <div className="container-blog py-16">
           <div className="mb-10 flex items-end justify-between">
