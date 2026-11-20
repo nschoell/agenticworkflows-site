@@ -143,9 +143,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+    </Layout>
+  );
+}
 
-      {/* Full Trend Article */}
-      <section className="border-t border-slate-800 bg-slate-900/30">
         <div className="container-blog py-12">
           <h2 className="mb-6 text-2xl font-bold text-white">Trend Watch: Real‑Time Operations Monitoring with Generative AI (Manager Overview)</h2>
           <p className="text-slate-400"><strong>Why it matters for managers</strong></p>
