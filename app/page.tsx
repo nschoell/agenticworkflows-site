@@ -113,6 +113,8 @@ export default function HomePage() {
               <p className="text-sm text-slate-400">{p.desc}</p>
             </Link>
           ))}
+        </div>
+      </section>
 
       {/* Featured Trend */}
       <section className="border-t border-slate-800 bg-slate-900/30">
