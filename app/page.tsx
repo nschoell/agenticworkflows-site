@@ -46,11 +46,18 @@ const latest = [
       "Turn fragmented docs, Slack threads, and emails into a searchable AI‑powered knowledge hub that keeps managers in the loop.",
   },
   {
-    title: "Trend Watch: Real‑Time Operations Monitoring with Generative AI",
+    title: "Trend Watch: Real‑Time Operations Monitoring with Generative AI (Manager Overview)",
     category: "Trend",
-    href: "/posts/trend-2",
+    href: "/posts/trend-2-manager",
     excerpt:
       "How AI can surface context‑rich alerts from raw metrics, reducing noise and accelerating incident response.",
+  },
+  {
+    title: "How‑To: Implement Real‑Time AI‑Powered Operations Monitoring",
+    category: "How-To",
+    href: "/posts/howto-5-ai-observability",
+    excerpt:
+      "Step‑by‑step guide for engineers to build an AI‑augmented observability pipeline.",
   },
 ];
 
