@@ -46,13 +46,6 @@ const latest = [
       "Turn fragmented docs, Slack threads, and emails into a searchable AI‑powered knowledge hub that keeps managers in the loop.",
   },
   {
-    title: "Trend Watch: Real‑Time Operations Monitoring with Generative AI (Manager Overview)",
-    category: "Trend",
-    href: "/posts/trend-2-manager",
-    excerpt:
-      "How AI can surface context‑rich alerts from raw metrics, reducing noise and accelerating incident response.",
-  },
-  {
     title: "How‑To: Implement Real‑Time AI‑Powered Operations Monitoring",
     category: "How-To",
     href: "/posts/howto-5-ai-observability",
@@ -116,35 +109,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Full Trend Article */}
-      <section className="border-t border-slate-800 bg-slate-900/30">
-        <div className="container-blog py-12">
-          <h2 className="mb-6 text-2xl font-bold text-white">Trend Watch: Real‑Time Operations Monitoring with Generative AI (Manager Overview)</h2>
-          <p className="text-slate-400"><strong>Why it matters for managers</strong></p>
-          <p className="text-slate-400">In 2026, the traditional metrics‑only monitoring stack (Prometheus + Grafana) is giving way to <strong>AI‑augmented observability</strong>. Instead of staring at a chart of CPU spikes, managers now get <strong>context‑rich alerts</strong> that explain what happened, why it happened, and what to do next – all in real time.</p>
-          <h3 className="mt-4 text-lg font-semibold text-white">The business impact</h3>
-          <ul className="list-disc pl-5 text-slate-400">
-            <li>Faster incident response – Mean Time To Detect drops from minutes to seconds because the AI flags anomalies before thresholds are breached.</li>
-            <li>Reduced noise – AI scores alerts by business impact, surfacing only the critical ones and cutting down on alert fatigue.</li>
-            <li>Actionable insight – An alert might read: “CPU 95 % after recent DB schema migration; rollback pending,” giving your team a clear next step.</li>
-            <li>Strategic visibility – Weekly AI‑generated ops reports summarize trends, bottlenecks, and improvement opportunities for leadership.</li>
-          </ul>
-          <h3 className="mt-4 text-lg font-semibold text-white">What’s new in the AI‑observability toolbox</h3>
-          <ul className="list-disc pl-5 text-slate-400">
-            <li>LLM‑driven summarization – Large language models (Claude 3.5, GPT‑4o, or local Ollama models) turn raw metrics into natural‑language explanations.</li>
-            <li>Vector‑store correlation – Embeddings of recent events, logs, and change‑logs let the AI surface related context instantly.</li>
-            <li>Feedback loop – Managers can up‑vote or down‑vote alerts, training the system to prioritize the most valuable signals.</li>
-          </ul>
-          <h3 className="mt-4 text-lg font-semibold text-white">Quick win checklist for a manager</h3>
-          <ol className="list-decimal pl-5 text-slate-400">
-            <li>Start with two data sources – Prometheus metrics + your incident ticket system (e.g., Jira).</li>
-            <li>Enable a hosted vector store – Pinecone’s free tier works for a pilot.</li>
-            <li>Set up a Slack webhook – route AI‑generated alerts to a dedicated <code>#ops‑alerts</code> channel.</li>
-            <li>Schedule a weekly digest – let the AI produce a short ops health report for the leadership meeting.</li>
-          </ol>
-          <p className="mt-4 text-slate-400"><strong>Bottom line:</strong> By turning raw numbers into story‑driven insights, you give your team the context they need to act fast, reduce fire‑drills, and keep the business moving forward.</p>
-        </div>
-      </section>
+
 
 
       <section className="border-t border-slate-800 bg-slate-900/30">
@@ -178,6 +143,33 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </Layout>
-  );
-}
+
+      {/* Full Trend Article */}
+      <section className="border-t border-slate-800 bg-slate-900/30">
+        <div className="container-blog py-12">
+          <h2 className="mb-6 text-2xl font-bold text-white">Trend Watch: Real‑Time Operations Monitoring with Generative AI (Manager Overview)</h2>
+          <p className="text-slate-400"><strong>Why it matters for managers</strong></p>
+          <p className="text-slate-400">In 2026, the traditional metrics‑only monitoring stack (Prometheus + Grafana) is giving way to <strong>AI‑augmented observability</strong>. Instead of staring at a chart of CPU spikes, managers now get <strong>context‑rich alerts</strong> that explain what happened, why it happened, and what to do next – all in real time.</p>
+          <h3 className="mt-4 text-lg font-semibold text-white">The business impact</h3>
+          <ul className="list-disc pl-5 text-slate-400">
+            <li>Faster incident response – Mean Time To Detect drops from minutes to seconds because the AI flags anomalies before thresholds are breached.</li>
+            <li>Reduced noise – AI scores alerts by business impact, surfacing only the critical ones and cutting down on alert fatigue.</li>
+            <li>Actionable insight – An alert might read: “CPU 95 % after recent DB schema migration; rollback pending,” giving your team a clear next step.</li>
+            <li>Strategic visibility – Weekly AI‑generated ops reports summarize trends, bottlenecks, and improvement opportunities for leadership.</li>
+          </ul>
+          <h3 className="mt-4 text-lg font-semibold text-white">What’s new in the AI‑observability toolbox</h3>
+          <ul className="list-disc pl-5 text-slate-400">
+            <li>LLM‑driven summarization – Large language models (Claude 3.5, GPT‑4o, or local Ollama models) turn raw metrics into natural‑language explanations.</li>
+            <li>Vector‑store correlation – Embeddings of recent events, logs, and change‑logs let the AI surface related context instantly.</li>
+            <li>Feedback loop – Managers can up‑vote or down‑vote alerts, training the system to prioritize the most valuable signals.</li>
+          </ul>
+          <h3 className="mt-4 text-lg font-semibold text-white">Quick win checklist for a manager</h3>
+          <ol className="list-decimal pl-5 text-slate-400">
+            <li>Start with two data sources – Prometheus metrics + your incident ticket system (e.g., Jira).</li>
+            <li>Enable a hosted vector store – Pinecone’s free tier works for a pilot.</li>
+            <li>Set up a Slack webhook – route AI‑generated alerts to a dedicated <code>#ops‑alerts</code> channel.</li>
+            <li>Schedule a weekly digest – let the AI produce a short ops health report for the leadership meeting.</li>
+          </ol>
+          <p className="mt-4 text-slate-400"><strong>Bottom line:</strong> By turning raw numbers into story‑driven insights, you give your team the context they need to act fast, reduce fire‑drills, and keep the business moving forward.</p>
+        </div>
+      </section>
