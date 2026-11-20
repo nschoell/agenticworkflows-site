@@ -130,7 +130,7 @@ export default function HomePage() {
               View all <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {latest.map((post) => (
               <Link key={post.title} href={post.href} className="card block">
                 <span className="mb-3 inline-block rounded-full bg-brand-500/10 px-3 py-1 text-xs font-medium text-brand-300">
