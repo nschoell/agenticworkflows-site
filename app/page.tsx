@@ -39,25 +39,18 @@ const pillars = [
 
 const latest = [
   {
-    title: "Deep Dive: Building an Agentic Workflow from Scratch",
+    title: "Deep Dive: AI‑Driven Knowledge Management for Teams",
     category: "Deep Dive",
-    href: "/archive",
+    href: "/posts/deep-dive-5",
     excerpt:
-      "A hands-on walkthrough of the components, memory, and tools that make a reliable agent loop.",
+      "Turn fragmented docs, Slack threads, and emails into a searchable AI‑powered knowledge hub that keeps managers in the loop.",
   },
   {
-    title: "How-To: Automating Ops with AI",
-    category: "How-To",
-    href: "/archive",
-    excerpt:
-      "Practical patterns for wiring AI into your operational workflows without the chaos.",
-  },
-  {
-    title: "Trend Watch: The Rise of Human-in-the-Loop AI",
+    title: "Trend Watch: Real‑Time Operations Monitoring with Generative AI",
     category: "Trend",
-    href: "/archive",
+    href: "/posts/trend-2",
     excerpt:
-      "Why the most successful AI systems pair autonomy with human oversight.",
+      "How AI can surface context‑rich alerts from raw metrics, reducing noise and accelerating incident response.",
   },
 ];
 
