@@ -143,6 +143,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+    {/* Recent Trend */}
+    <section className="border-t border-slate-800 bg-slate-900/30">
+      <div className="container-blog py-12">
+        <h2 className="mb-6 text-2xl font-bold text-white">Recent Trend</h2>
+        <Link href="/posts/trend-3-manager" className="card block">
+          <span className="mb-3 inline-block rounded-full bg-brand-500/10 px-3 py-1 text-xs font-medium text-brand-300">Trend</span>
+          <h3 className="mb-2 font-semibold">Trend Watch: AI‑Enhanced Security Monitoring (Manager Overview)</h3>
+          <p className="text-sm text-slate-400">AI‑augmented security monitoring turns raw logs into actionable stories, helping managers prioritize and act faster.</p>
+        </Link>
+      </div>
+    </section>
     {/* Full Trend Article */}
     <section className="border-t border-slate-800 bg-slate-900/30">
       <div className="container-blog py-12">
