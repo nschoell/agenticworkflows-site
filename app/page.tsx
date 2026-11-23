@@ -58,7 +58,7 @@ export default function HomePage() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden" style={{backgroundImage: "url('/assets/background1.png')", backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(79,70,229,0.25),transparent)]" />
         <div className="container-blog py-24 text-center sm:py-32">
           <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-sm font-medium text-brand-300">
