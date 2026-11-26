@@ -5,21 +5,11 @@ export default function Preview() {
     <div className="min-h-screen bg-gradient-to-b from-brand-500 to-brand-400">
       <section
         className="flex items-center justify-center h-64"
-        style={{
-          backgroundImage: "url('/assets/background1.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
       >
         <h1 className="text-4xl font-bold text-white">Site Preview – Header Background</h1>
       </section>
       <section
         className="flex items-center justify-center h-64"
-        style={{
-          backgroundImage: "url('/assets/background2.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
       >
         <h2 className="text-3xl font-semibold text-white">Another Section</h2>
       </section>
