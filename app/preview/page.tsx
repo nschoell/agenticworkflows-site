@@ -3,14 +3,10 @@ import Link from 'next/link';
 export default function Preview() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-brand-500 to-brand-400">
-      <section
-        className="flex items-center justify-center h-64"
-      >
+      <section className="flex items-center justify-center h-64" style={{backgroundImage: "url('/assets/back-1.png')", backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <h1 className="text-4xl font-bold text-white">Site Preview – Header Background</h1>
       </section>
-      <section
-        className="flex items-center justify-center h-64"
-      >
+      <section className="flex items-center justify-center h-64" style={{backgroundImage: "url('/assets/back-1.png')", backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <h2 className="text-3xl font-semibold text-white">Another Section</h2>
       </section>
       <div className="p-8">
